@@ -25,3 +25,7 @@ Manage climate in home using a geothermal heatpump, solvers, predictive weather 
 * Comission ground source heatpump
 * containerise software for easier hardware transition 
 * Standard brain running linux
+
+# Links
+* https://www.researchgate.net/publication/327136772_A_Python-Based_Toolbox_for_Model_Predictive_Control_Applied_to_Buildings
+* https://filterpy.readthedocs.io/en/latest/kalman/ExtendedKalmanFilter.html
