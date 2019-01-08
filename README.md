@@ -6,8 +6,8 @@ Manage climate in home using a geothermal heatpump, solvers, predictive weather 
 ### Software
 
 * Predictor of thermal requirements
-   * Weather data
-* Observer of climate conditions
+   * Weather data, eg https://pypi.org/project/weather-api/
+* Observer of climate conditions, eg https://github.com/marcass/esp32-sensornet
    * Temperature sensors
       * In slab
       * In lower storey/upper storey
