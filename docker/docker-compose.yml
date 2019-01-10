@@ -1,0 +1,47 @@
+# https://docs.docker.com/compose/compose-file/
+version: '3'
+services:
+  influxdb:
+    build:
+      context: .
+      dockerfile: "influxdb"
+    ports:
+      - "8086:8087"
+    volumes:
+      - type: volume
+        source: influx
+        target: /var/lib/inflxdb
+      #- influx:/var/lib/inflxdb
+    # restart: always
+  # controller:
+  #   build:
+  #     context: .
+  #     dockerfile: "controller"
+  #   depends-on:
+  #     - influxdb
+  #   volumes:
+  #     - influx
+  #   ports:
+  #    - "5001:5004"
+  observer:
+    build:
+      context: .
+      dockerfile: "observer"
+    depends-on:
+      - influxdb
+    ports:
+      - "5002:5005"
+
+  #  predictor:
+  #   build:
+  #     context: .
+  #     dockerfile: "predictor"
+  #   depends-on:
+  #     - influxdb
+  #   volumes:
+  #     - influx
+    # ports:
+    #   - "5003:5006"
+volumes:
+  #sqlite_db:
+  influx:
