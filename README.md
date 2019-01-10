@@ -29,3 +29,6 @@ Manage climate in home using a geothermal heatpump, solvers, predictive weather 
 # Links
 * https://www.researchgate.net/publication/327136772_A_Python-Based_Toolbox_for_Model_Predictive_Control_Applied_to_Buildings
 * https://filterpy.readthedocs.io/en/latest/kalman/ExtendedKalmanFilter.html
+
+# Things to do
+* Work out how to perist and share data between containers for influxdb
