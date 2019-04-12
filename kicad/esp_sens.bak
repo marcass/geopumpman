@@ -382,7 +382,7 @@ Wire Wire Line
 	4250 5400 4250 5150
 Text GLabel 3550 6200 0    60   Input ~ 0
 DS1820
-Text GLabel 3950 3150 2    60   Input ~ 0
+Text GLabel 3950 3550 2    60   Input ~ 0
 DS1820
 $Comp
 L esp_sens-rescue:+3.3V #PWR0114
@@ -536,21 +536,21 @@ Text GLabel 9650 4300 2    50   Input ~ 0
 IO2
 Text GLabel 9650 4200 2    50   Input ~ 0
 IO1
-Text GLabel 2450 3750 0    50   Input ~ 0
+Text GLabel 2450 3850 0    50   Input ~ 0
 IO_1
 Text GLabel 2450 3250 0    50   Input ~ 0
 IO_2
 Text GLabel 2450 3150 0    50   Input ~ 0
 IO_3
-Text GLabel 2450 2850 0    50   Input ~ 0
+Text GLabel 2450 3650 0    50   Input ~ 0
 IO_4
-Text GLabel 2450 2650 0    50   Input ~ 0
+Text GLabel 2450 2350 0    50   Input ~ 0
 IO_5
-Text GLabel 2450 2750 0    50   Input ~ 0
+Text GLabel 2450 2250 0    50   Input ~ 0
 IO_6
-Text GLabel 2450 3050 0    50   Input ~ 0
+Text GLabel 2450 2150 0    50   Input ~ 0
 IO_7
-Text GLabel 2450 3450 0    50   Input ~ 0
+Text GLabel 3950 2450 2    50   Input ~ 0
 IO_8
 Text GLabel 3950 3350 2    50   Input ~ 0
 IO_9
@@ -578,7 +578,7 @@ Text GLabel 3550 6750 0    50   Input ~ 0
 IO_11
 Text GLabel 3950 3250 2    50   Input ~ 0
 IO_10
-Text GLabel 2450 2450 0    50   Input ~ 0
+Text GLabel 2450 3050 0    50   Input ~ 0
 IO_11
 Text GLabel 2450 2950 0    50   Input ~ 0
 IO_1
