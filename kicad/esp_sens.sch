@@ -554,15 +554,15 @@ Text GLabel 2450 3450 0    50   Input ~ 0
 IO_8
 Text GLabel 3950 3350 2    50   Input ~ 0
 IO_9
-Text GLabel 3550 5800 0    50   Input ~ 0
-IO_1
 Text GLabel 3550 6000 0    50   Input ~ 0
+IO_1
+Text GLabel 3550 5800 0    50   Input ~ 0
 IO_2
 Text GLabel 3550 5900 0    50   Input ~ 0
 IO_3
-Text GLabel 3550 5700 0    50   Input ~ 0
-IO_4
 Text GLabel 3550 6100 0    50   Input ~ 0
+IO_4
+Text GLabel 3550 5700 0    50   Input ~ 0
 IO_5
 Text GLabel 3550 6850 0    50   Input ~ 0
 IO_6
@@ -580,8 +580,6 @@ Text GLabel 3950 3250 2    50   Input ~ 0
 IO_10
 Text GLabel 2450 2450 0    50   Input ~ 0
 IO_11
-Text GLabel 2450 2950 0    50   Input ~ 0
-IO_1
 Text GLabel 3700 4550 1    50   Input ~ 0
 IO_1
 Wire Wire Line
