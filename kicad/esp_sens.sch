@@ -520,15 +520,15 @@ Text GLabel 9500 5750 0    50   Input ~ 0
 IO1
 Text GLabel 9500 5850 0    50   Input ~ 0
 IO2
-Text GLabel 9500 6150 0    50   Input ~ 0
-IO3
 Text GLabel 9500 6050 0    50   Input ~ 0
+IO3
+Text GLabel 9500 6150 0    50   Input ~ 0
 IO4
 Text GLabel 9500 5950 0    50   Input ~ 0
 IO5
 Text GLabel 8150 3600 0    50   Input ~ 0
 IO5
-Text GLabel 8150 3700 0    50   Input ~ 0
+Text GLabel 8150 4300 0    50   Input ~ 0
 IO4
 Text GLabel 8150 3800 0    50   Input ~ 0
 IO3
@@ -544,11 +544,11 @@ Text GLabel 2450 3150 0    50   Input ~ 0
 IO_3
 Text GLabel 2450 2850 0    50   Input ~ 0
 IO_4
-Text GLabel 2450 2650 0    50   Input ~ 0
+Text GLabel 2450 3850 0    50   Input ~ 0
 IO_5
-Text GLabel 2450 2750 0    50   Input ~ 0
+Text GLabel 3950 3050 2    50   Input ~ 0
 IO_6
-Text GLabel 2450 3050 0    50   Input ~ 0
+Text GLabel 3950 2950 2    50   Input ~ 0
 IO_7
 Text GLabel 2450 3450 0    50   Input ~ 0
 IO_8
@@ -560,21 +560,21 @@ Text GLabel 3550 6000 0    50   Input ~ 0
 IO_2
 Text GLabel 3550 5900 0    50   Input ~ 0
 IO_3
-Text GLabel 3550 6100 0    50   Input ~ 0
-IO_4
 Text GLabel 3550 5700 0    50   Input ~ 0
+IO_4
+Text GLabel 3550 6100 0    50   Input ~ 0
 IO_5
-Text GLabel 3550 6950 0    50   Input ~ 0
-IO_6
-Text GLabel 3550 7050 0    50   Input ~ 0
-IO_7
 Text GLabel 3550 6850 0    50   Input ~ 0
+IO_6
+Text GLabel 3550 6950 0    50   Input ~ 0
+IO_7
+Text GLabel 3550 6750 0    50   Input ~ 0
 IO_8
 Text GLabel 3550 6550 0    50   Input ~ 0
 IO_9
 Text GLabel 3550 6650 0    50   Input ~ 0
 IO_10
-Text GLabel 3550 6750 0    50   Input ~ 0
+Text GLabel 3550 7050 0    50   Input ~ 0
 IO_11
 Text GLabel 3950 3250 2    50   Input ~ 0
 IO_10
@@ -597,8 +597,6 @@ F 3 "" H 8450 2100 50  0000 C CNN
 	1    8450 2100
 	1    0    0    -1  
 $EndComp
-Text GLabel 8450 1800 1    50   Input ~ 0
-IO5
 Wire Wire Line
 	8150 3100 8150 3000
 Connection ~ 8150 3000
@@ -620,4 +618,6 @@ Wire Wire Line
 	1900 5400 2100 5400
 Wire Wire Line
 	2100 5100 2100 5400
+Text GLabel 8450 1800 1    50   Input ~ 0
+IO3
 $EndSCHEMATC

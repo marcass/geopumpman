@@ -382,7 +382,7 @@ Wire Wire Line
 	4250 5400 4250 5150
 Text GLabel 3550 6200 0    60   Input ~ 0
 DS1820
-Text GLabel 3950 3550 2    60   Input ~ 0
+Text GLabel 3950 3150 2    60   Input ~ 0
 DS1820
 $Comp
 L esp_sens-rescue:+3.3V #PWR0114
@@ -520,15 +520,15 @@ Text GLabel 9500 5750 0    50   Input ~ 0
 IO1
 Text GLabel 9500 5850 0    50   Input ~ 0
 IO2
-Text GLabel 9500 6150 0    50   Input ~ 0
-IO3
 Text GLabel 9500 6050 0    50   Input ~ 0
+IO3
+Text GLabel 9500 6150 0    50   Input ~ 0
 IO4
 Text GLabel 9500 5950 0    50   Input ~ 0
 IO5
 Text GLabel 8150 3600 0    50   Input ~ 0
 IO5
-Text GLabel 8150 3700 0    50   Input ~ 0
+Text GLabel 8150 4300 0    50   Input ~ 0
 IO4
 Text GLabel 8150 3800 0    50   Input ~ 0
 IO3
@@ -536,21 +536,21 @@ Text GLabel 9650 4300 2    50   Input ~ 0
 IO2
 Text GLabel 9650 4200 2    50   Input ~ 0
 IO1
-Text GLabel 2450 3850 0    50   Input ~ 0
+Text GLabel 2450 3750 0    50   Input ~ 0
 IO_1
 Text GLabel 2450 3250 0    50   Input ~ 0
 IO_2
 Text GLabel 2450 3150 0    50   Input ~ 0
 IO_3
-Text GLabel 2450 3650 0    50   Input ~ 0
+Text GLabel 2450 2850 0    50   Input ~ 0
 IO_4
-Text GLabel 2450 2350 0    50   Input ~ 0
+Text GLabel 2450 3850 0    50   Input ~ 0
 IO_5
-Text GLabel 2450 2250 0    50   Input ~ 0
+Text GLabel 3950 3050 2    50   Input ~ 0
 IO_6
-Text GLabel 2450 2150 0    50   Input ~ 0
+Text GLabel 3950 2950 2    50   Input ~ 0
 IO_7
-Text GLabel 3950 2450 2    50   Input ~ 0
+Text GLabel 2450 3450 0    50   Input ~ 0
 IO_8
 Text GLabel 3950 3350 2    50   Input ~ 0
 IO_9
@@ -560,25 +560,25 @@ Text GLabel 3550 6000 0    50   Input ~ 0
 IO_2
 Text GLabel 3550 5900 0    50   Input ~ 0
 IO_3
-Text GLabel 3550 6100 0    50   Input ~ 0
-IO_4
 Text GLabel 3550 5700 0    50   Input ~ 0
+IO_4
+Text GLabel 3550 6100 0    50   Input ~ 0
 IO_5
-Text GLabel 3550 6950 0    50   Input ~ 0
-IO_6
-Text GLabel 3550 7050 0    50   Input ~ 0
-IO_7
 Text GLabel 3550 6850 0    50   Input ~ 0
+IO_6
+Text GLabel 3550 6950 0    50   Input ~ 0
+IO_7
+Text GLabel 3550 6750 0    50   Input ~ 0
 IO_8
 Text GLabel 3550 6550 0    50   Input ~ 0
 IO_9
 Text GLabel 3550 6650 0    50   Input ~ 0
 IO_10
-Text GLabel 3550 6750 0    50   Input ~ 0
+Text GLabel 3550 7050 0    50   Input ~ 0
 IO_11
 Text GLabel 3950 3250 2    50   Input ~ 0
 IO_10
-Text GLabel 2450 3050 0    50   Input ~ 0
+Text GLabel 2450 2450 0    50   Input ~ 0
 IO_11
 Text GLabel 2450 2950 0    50   Input ~ 0
 IO_1
