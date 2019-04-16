@@ -214,7 +214,7 @@ U 1 1 5CB007BB
 P 8600 5100
 F 0 "P2" H 8600 5300 50  0000 C CNN
 F 1 "CONN_01X03" V 8700 5100 50  0000 C CNN
-F 2 "Connector_Phoenix_MC_HighVoltage:PhoenixContact_MCV_1,5_3-G-5.08_1x03_P5.08mm_Vertical" H 8600 5100 50  0001 C CNN
+F 2 "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.81_1x03_P3.81mm_Vertical" H 8600 5100 50  0001 C CNN
 F 3 "" H 8600 5100 50  0000 C CNN
 	1    8600 5100
 	1    0    0    -1  
@@ -225,7 +225,7 @@ U 1 1 5CB00898
 P 2450 5000
 F 0 "P1" H 2450 5200 50  0000 C CNN
 F 1 "CONN_01X03" V 2550 5000 50  0000 C CNN
-F 2 "Connector_Phoenix_MC_HighVoltage:PhoenixContact_MCV_1,5_3-G-5.08_1x03_P5.08mm_Vertical" H 2450 5000 50  0001 C CNN
+F 2 "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.81_1x03_P3.81mm_Vertical" H 2450 5000 50  0001 C CNN
 F 3 "" H 2450 5000 50  0000 C CNN
 	1    2450 5000
 	1    0    0    -1  
@@ -331,23 +331,12 @@ F 3 "" H 3700 4750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L esp_sens-rescue:CONN_01X08 P3
-U 1 1 5CB0178E
-P 3750 5850
-F 0 "P3" H 3750 6300 50  0000 C CNN
-F 1 "CONN_01X08" V 3850 5850 50  0000 C CNN
-F 2 "Connector_Phoenix_MC_HighVoltage:PhoenixContact_MCV_1,5_8-G-5.08_1x08_P5.08mm_Vertical" H 3750 5850 50  0001 C CNN
-F 3 "" H 3750 5850 50  0000 C CNN
-	1    3750 5850
-	1    0    0    -1  
-$EndComp
-$Comp
 L esp_sens-rescue:CONN_01X08 P4
 U 1 1 5CB01863
 P 3750 6900
 F 0 "P4" H 3750 7350 50  0000 C CNN
 F 1 "CONN_01X08" V 3850 6900 50  0000 C CNN
-F 2 "Connector_Phoenix_MC_HighVoltage:PhoenixContact_MCV_1,5_8-G-5.08_1x08_P5.08mm_Vertical" H 3750 6900 50  0001 C CNN
+F 2 "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.81_1x08_P3.81mm_Vertical" H 3750 6900 50  0001 C CNN
 F 3 "" H 3750 6900 50  0000 C CNN
 	1    3750 6900
 	1    0    0    -1  
@@ -380,60 +369,32 @@ Wire Wire Line
 	4300 5400 4250 5400
 Wire Wire Line
 	4250 5400 4250 5150
-Text GLabel 3550 6200 0    60   Input ~ 0
+Text GLabel 3550 6850 0    60   Input ~ 0
 DS1820
 Text GLabel 3950 3150 2    60   Input ~ 0
 DS1820
 $Comp
 L esp_sens-rescue:+3.3V #PWR0114
 U 1 1 5CB01E7F
-P 3350 7500
-F 0 "#PWR0114" H 3350 7350 50  0001 C CNN
-F 1 "+3.3V" H 3350 7640 50  0000 C CNN
-F 2 "" H 3350 7500 50  0000 C CNN
-F 3 "" H 3350 7500 50  0000 C CNN
-	1    3350 7500
-	1    0    0    -1  
-$EndComp
-$Comp
-L esp_sens-rescue:+3.3V #PWR0115
-U 1 1 5CB01EF8
-P 3450 5450
-F 0 "#PWR0115" H 3450 5300 50  0001 C CNN
-F 1 "+3.3V" H 3450 5590 50  0000 C CNN
-F 2 "" H 3450 5450 50  0000 C CNN
-F 3 "" H 3450 5450 50  0000 C CNN
-	1    3450 5450
-	1    0    0    -1  
-$EndComp
-$Comp
-L esp_sens-rescue:GND #PWR0116
-U 1 1 5CB01F39
-P 3050 5600
-F 0 "#PWR0116" H 3050 5350 50  0001 C CNN
-F 1 "GND" H 3050 5450 50  0000 C CNN
-F 2 "" H 3050 5600 50  0000 C CNN
-F 3 "" H 3050 5600 50  0000 C CNN
-	1    3050 5600
+P 3550 6550
+F 0 "#PWR0114" H 3550 6400 50  0001 C CNN
+F 1 "+3.3V" H 3550 6690 50  0000 C CNN
+F 2 "" H 3550 6550 50  0000 C CNN
+F 3 "" H 3550 6550 50  0000 C CNN
+	1    3550 6550
 	1    0    0    -1  
 $EndComp
 $Comp
 L esp_sens-rescue:GND #PWR0117
 U 1 1 5CB01FB2
-P 3150 7150
-F 0 "#PWR0117" H 3150 6900 50  0001 C CNN
-F 1 "GND" H 3150 7000 50  0000 C CNN
-F 2 "" H 3150 7150 50  0000 C CNN
-F 3 "" H 3150 7150 50  0000 C CNN
-	1    3150 7150
+P 3550 7250
+F 0 "#PWR0117" H 3550 7000 50  0001 C CNN
+F 1 "GND" H 3550 7100 50  0000 C CNN
+F 2 "" H 3550 7250 50  0000 C CNN
+F 3 "" H 3550 7250 50  0000 C CNN
+	1    3550 7250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3550 5500 3450 5500
-Wire Wire Line
-	3450 5500 3450 5450
-Wire Wire Line
-	3550 5600 3050 5600
 $Comp
 L esp_sens-rescue:GND #PWR0118
 U 1 1 5CB020EF
@@ -468,19 +429,15 @@ U 1 1 5CB018CC
 P 9700 5800
 F 0 "P5" H 9700 6250 50  0000 C CNN
 F 1 "CONN_01X08" V 9800 5800 50  0000 C CNN
-F 2 "Connector_Phoenix_MC_HighVoltage:PhoenixContact_MCV_1,5_8-G-5.08_1x08_P5.08mm_Vertical" H 9700 5800 50  0001 C CNN
+F 2 "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_8-G-3.81_1x08_P3.81mm_Vertical" H 9700 5800 50  0001 C CNN
 F 3 "" H 9700 5800 50  0000 C CNN
 	1    9700 5800
 	1    0    0    -1  
 $EndComp
-Text GLabel 9500 5650 0    60   Input ~ 0
+Text GLabel 9500 5950 0    60   Input ~ 0
 DS1820a
 Wire Wire Line
-	9500 5450 9400 5450
-Wire Wire Line
-	9400 5450 9400 5400
-Wire Wire Line
-	9500 5550 9000 5550
+	9500 6150 9000 6150
 Text GLabel 8150 3500 0    60   Input ~ 0
 DS1820a
 $Comp
@@ -497,34 +454,34 @@ $EndComp
 $Comp
 L esp_sens-rescue:+3.3VA #PWR0120
 U 1 1 5CB01BEF
-P 9400 5400
-F 0 "#PWR0120" H 9400 5250 50  0001 C CNN
-F 1 "+3.3VA" H 9400 5540 50  0000 C CNN
-F 2 "" H 9400 5400 50  0000 C CNN
-F 3 "" H 9400 5400 50  0000 C CNN
-	1    9400 5400
+P 9000 6000
+F 0 "#PWR0120" H 9000 5850 50  0001 C CNN
+F 1 "+3.3VA" H 9000 6140 50  0000 C CNN
+F 2 "" H 9000 6000 50  0000 C CNN
+F 3 "" H 9000 6000 50  0000 C CNN
+	1    9000 6000
 	1    0    0    -1  
 $EndComp
 $Comp
 L esp_sens-rescue:GNDA #PWR0121
 U 1 1 5CB01CE9
-P 9000 5550
-F 0 "#PWR0121" H 9000 5300 50  0001 C CNN
-F 1 "GNDA" H 9000 5400 50  0000 C CNN
-F 2 "" H 9000 5550 50  0000 C CNN
-F 3 "" H 9000 5550 50  0000 C CNN
-	1    9000 5550
+P 9000 6150
+F 0 "#PWR0121" H 9000 5900 50  0001 C CNN
+F 1 "GNDA" H 9000 6000 50  0000 C CNN
+F 2 "" H 9000 6150 50  0000 C CNN
+F 3 "" H 9000 6150 50  0000 C CNN
+	1    9000 6150
 	1    0    0    -1  
 $EndComp
-Text GLabel 9500 5750 0    50   Input ~ 0
+Text GLabel 9500 5650 0    50   Input ~ 0
 IO1
-Text GLabel 9500 5850 0    50   Input ~ 0
+Text GLabel 9500 5550 0    50   Input ~ 0
 IO2
-Text GLabel 9500 6050 0    50   Input ~ 0
+Text GLabel 9500 5750 0    50   Input ~ 0
 IO3
-Text GLabel 9500 6150 0    50   Input ~ 0
+Text GLabel 9500 5450 0    50   Input ~ 0
 IO4
-Text GLabel 9500 5950 0    50   Input ~ 0
+Text GLabel 9500 5850 0    50   Input ~ 0
 IO5
 Text GLabel 8150 3600 0    50   Input ~ 0
 IO5
@@ -538,50 +495,24 @@ Text GLabel 9650 4200 2    50   Input ~ 0
 IO1
 Text GLabel 2450 3750 0    50   Input ~ 0
 IO_1
-Text GLabel 2450 3250 0    50   Input ~ 0
-IO_2
-Text GLabel 2450 3150 0    50   Input ~ 0
-IO_3
-Text GLabel 2450 2850 0    50   Input ~ 0
-IO_4
-Text GLabel 2450 3850 0    50   Input ~ 0
-IO_5
 Text GLabel 3950 3050 2    50   Input ~ 0
 IO_6
-Text GLabel 3950 2950 2    50   Input ~ 0
-IO_7
 Text GLabel 2450 3450 0    50   Input ~ 0
-IO_8
+IO_7
 Text GLabel 3950 3350 2    50   Input ~ 0
 IO_9
-Text GLabel 3550 6000 0    50   Input ~ 0
+Text GLabel 3550 7150 0    50   Input ~ 0
 IO_1
-Text GLabel 3550 5800 0    50   Input ~ 0
-IO_2
-Text GLabel 3550 5900 0    50   Input ~ 0
-IO_3
-Text GLabel 3550 6100 0    50   Input ~ 0
-IO_4
-Text GLabel 3550 5700 0    50   Input ~ 0
-IO_5
-Text GLabel 3550 6850 0    50   Input ~ 0
-IO_6
-Text GLabel 3550 6950 0    50   Input ~ 0
-IO_7
 Text GLabel 3550 6750 0    50   Input ~ 0
-IO_8
-Text GLabel 3550 6550 0    50   Input ~ 0
-IO_9
+IO_6
 Text GLabel 3550 6650 0    50   Input ~ 0
-IO_10
+IO_7
 Text GLabel 3550 7050 0    50   Input ~ 0
-IO_11
+IO_9
+Text GLabel 3550 6950 0    50   Input ~ 0
+IO_10
 Text GLabel 3950 3250 2    50   Input ~ 0
 IO_10
-Text GLabel 2450 2450 0    50   Input ~ 0
-IO_11
-Text GLabel 2450 2950 0    50   Input ~ 0
-IO_1
 Text GLabel 3700 4550 1    50   Input ~ 0
 IO_1
 Wire Wire Line
@@ -609,15 +540,13 @@ Wire Wire Line
 Wire Wire Line
 	8150 5200 8150 5350
 Wire Wire Line
-	3550 7150 3150 7150
-Wire Wire Line
-	3350 7500 3550 7500
-Wire Wire Line
-	3550 7500 3550 7250
-Wire Wire Line
 	1900 5400 2100 5400
 Wire Wire Line
 	2100 5100 2100 5400
 Text GLabel 8450 1800 1    50   Input ~ 0
 IO3
+Wire Wire Line
+	9000 6000 9000 6050
+Wire Wire Line
+	9000 6050 9500 6050
 $EndSCHEMATC
