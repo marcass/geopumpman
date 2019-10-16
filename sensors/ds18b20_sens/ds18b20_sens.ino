@@ -5,7 +5,7 @@
 #define ONE_WIRE_BUS 2
 #define EXCHANGER 1 //1/2/3/4
 const String POSITION = "start"; //start || end
-const String DEPTH = "bottom"; //bottom||top
+String filename = EXCHANGER+"_"+POSITION+".csv";
 
 // Setup a oneWire instance to communicate with any OneWire devices
 OneWire oneWire(ONE_WIRE_BUS);
@@ -22,7 +22,7 @@ DeviceAddress BOTTOM_TEMP_SENSOR = {0x28, 0xCC, 0x02, 0xAF, 0x03, 0x00, 0x00, 0x
 
 void setup() {
   // start serial port
-  Serial.begin(115200);
+  Serial.begin(9600);
   // Start up the library
   // sensors.begin();
   // set the resolution to 9 bit - Valid values are 9, 10, or 11 bit.
@@ -34,24 +34,32 @@ void setup() {
 }
 
 void loop() {
- // call sensors.requestTemperatures() to issue a global temperature
- // request to all devices on the bus
-/********************************************************************/
- Serial.print(" Requesting temperatures...");
- float top = sensors.requestTemperaturesByAddress(TOP_TEMP_SENSOR);
- delay(500);
- float bottom = sensors.requestTemperaturesByAddress(BOTTOM_TEMP_SENSOR);
- delay(500);
- float bottomC = sensors.getTempC(BOTTOM_TEMP_SENSOR);
- float topC = sensors.getTempC(TOP_TEMP_SENSOR);
- Serial.println("DONE");
-/********************************************************************/
- Serial.print("Top temperature is: ");
- Serial.print(topC);
- Serial.print("; Bottom temperature is: ");
- Serial.print(bottomC);
- // Serial.print(sensors.getTempCByIndex(0)); // Why "byIndex"?
- //   // You can have more than one DS18B20 on the same bus.
- //   // 0 refers to the first IC on the wire
-   delay(1000);
+  // call sensors.requestTemperatures() to issue a global temperature
+  // request to all devices on the bus
+  Serial.print(" Requesting temperatures...");
+  // Tell the Sensor to Measure and Remember the Temperature it Measured
+  // http://henrysbench.capnfatz.com/henrys-bench/arduino-temperature-measurements/ds18b20-arduino-user-manual-introduction-and-contents/ds18b20-arduino-users-manual-part-3-reading-a-single-temperature/
+  sensors.requestTemperaturesByAddress(TOP_TEMP_SENSOR);// Send the command to get temperatures
+  float top = sensors.getTempC(TOP_TEMP_SENSOR);
+  delay(500);
+  sensors.requestTemperaturesByAddress(BOTTOM_TEMP_SENSOR);
+  float bottom = sensors.getTempC(BOTTOM_TEMP_SENSOR);
+  Serial.println("DONE");
+  /********************************************************************/
+  Serial.print("Top temperature is: ");
+  Serial.print(top, 4); // The four just increases the resolution that is printed
+  Serial.print("; Bottom temperature is: ");
+  Serial.println(bottom, 4);
+  //Paylod for python3
+  Serial.print("DATA/");
+  Serial.print(EXCHANGER);
+  Serial.print("/");
+  Serial.print(POSITION);
+  Serial.print("/");
+  Serial.print(EXCHANGER);
+  Serial.print("/");
+  Serial.print(top, 4); // The four just increases the resolution that is printed
+  Serial.print("/");
+  Serial.println(bottom, 4);
+  delay(5000);
 }
