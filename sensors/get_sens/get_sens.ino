@@ -1,6 +1,6 @@
 #include <OneWire.h>
 
-OneWire  ds(A2);  // This is where DQ of your DS18B20 will connect.
+OneWire  ds(A1);  // This is where DQ of your DS18B20 will connect.
 
 void setup(void) {
   Serial.begin(9600);
