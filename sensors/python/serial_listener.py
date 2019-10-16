@@ -1,8 +1,6 @@
 import serial
 import csv
-import time
-import json
-from threading import Thread
+from datetime import datetime
 
 def readlineCR(port):
     global boiler_data
@@ -25,12 +23,16 @@ def readlineCR(port):
                 top = data[2]
                 bottom = data[3]
                 f_name = str(exchanger) + '_' + position + '.csv'
-                print ('exhanger = '+exchanger+'; temps are: '+top+' '+bottom)
+                # current date and time
+                now = datetime.now()
+                timestamp = datetime.timestamp(now)
+                print ('exhanger = '+exchanger+'; temps are: '+top+' '+bottom+'; timestamp = '+timestamp)
+                # https://docs.python.org/3/library/csv.html
                 # with open(f_name, 'w+', newline='') as csvfile:
                 #     fieldnames = ['timestamp', 'top_temp', 'bottom_temp']
                 #     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
                 #     writer.writeheader()
-                #     writer.writerow({'timestamp': utc.now(), 'top_temp': top, 'bottom_temp': bottom})
+                #     writer.writerow({'timestamp': timestamp, 'top_temp': top, 'bottom_temp': bottom})
             return rv
 
 port = serial.Serial("/dev/arduino", baudrate=9600, timeout=3.0)
