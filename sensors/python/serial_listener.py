@@ -1,6 +1,7 @@
 import serial
 import csv
 from datetime import datetime
+import os.path
 
 def readlineCR(port):
     global boiler_data
@@ -25,25 +26,27 @@ def readlineCR(port):
                 data = received.split('/')
                 exchanger = data[0]
                 position = data[1]
-                top = data[2]
-                bottom = data[3]
+                top = float(data[2])
+                bottom = float(data[3])
                 f_name = str(exchanger) + '_' + position + '.csv'
                 # current date and time
                 now = datetime.now()
                 timestamp = datetime.timestamp(now)
-                print(data)
-                print(exchanger)
-                print(position)
-                print(top)
-                print(bottom)
-                print(f_name)
                 # print ('exhanger = '+exchanger+'; temps are: '+str(top)+' '+str(bottom)+'; timestamp = '+timestamp)
                 # https://docs.python.org/3/library/csv.html
-                with open(f_name, 'w+', newline='') as csvfile:
-                    fieldnames = ['timestamp', 'top_temp', 'bottom_temp']
-                    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-                    writer.writeheader()
-                    writer.writerow({'timestamp': timestamp, 'top_temp': top, 'bottom_temp': bottom})
+                file_exists = os.path.isfile(f_name)
+                if not file_exists:
+                    with open(f_name, 'w+', newline='') as csvfile:
+                        fieldnames = ['timestamp', 'top_temp', 'bottom_temp']
+                        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                        writer.writeheader()
+                        writer.writerow({'timestamp': timestamp, 'top_temp': top, 'bottom_temp': bottom})
+                else:
+                    with open(f_name, 'a', newline='') as csvfile:
+                        fieldnames = ['timestamp', 'top_temp', 'bottom_temp']
+                        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                        writer.writerow({'timestamp': timestamp, 'top_temp': top, 'bottom_temp': bottom})
+
             return rv
 
 port = serial.Serial("/dev/ttyUSB0", baudrate=9600, timeout=3.0)

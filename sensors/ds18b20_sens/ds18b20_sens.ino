@@ -16,8 +16,8 @@ DallasTemperature sensors(&oneWire);
  * http://henrysch.capnfatz.com/henrys-bench/arduino-tempera#define FRIDGE_RELAY 10
 ture-measurements/ds18b20-arduino-user-manual-introduction-and-contents/ds18b20-user-manual-part-2-getting-the-device-address/
  */
-DeviceAddress TOP_TEMP_SENSOR =     {0x28, 0xFF, 0x16, 0x8D, 0x87, 0x16, 0x03, 0x50}; //checked - sensor with breadboard wires on it
-DeviceAddress BOTTOM_TEMP_SENSOR =  {0x28, 0xFF, 0xE8, 0x8F, 0x70, 0x16, 0x05, 0x79}; //checked
+DeviceAddress BOTTOM_TEMP_SENSOR =     {0x28, 0xFF, 0x16, 0x8D, 0x87, 0x16, 0x03, 0x50}; //checked - sensor with breadboard wires on it
+DeviceAddress TOP_TEMP_SENSOR =  {0x28, 0xFF, 0xE8, 0x8F, 0x70, 0x16, 0x05, 0x79}; //checked
 
 
 void setup() {
