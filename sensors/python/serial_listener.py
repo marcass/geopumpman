@@ -32,6 +32,7 @@ def readlineCR(port):
                 # current date and time
                 now = datetime.now()
                 timestamp = datetime.timestamp(now)
+                strtime = timestamp.strftime("%d/%m/%Y, %H:%M:%S")
                 # print ('exhanger = '+exchanger+'; temps are: '+str(top)+' '+str(bottom)+'; timestamp = '+timestamp)
                 # https://docs.python.org/3/library/csv.html
                 file_exists = os.path.isfile(f_name)
@@ -40,7 +41,7 @@ def readlineCR(port):
                         fieldnames = ['timestamp', 'top_temp', 'bottom_temp']
                         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
                         writer.writeheader()
-                        writer.writerow({'timestamp': timestamp, 'top_temp': top, 'bottom_temp': bottom})
+                        writer.writerow({'timestamp': strtime, 'top_temp': top, 'bottom_temp': bottom})
                 else:
                     with open(f_name, 'a', newline='') as csvfile:
                         fieldnames = ['timestamp', 'top_temp', 'bottom_temp']
