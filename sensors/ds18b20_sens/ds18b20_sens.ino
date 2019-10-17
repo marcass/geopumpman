@@ -1,10 +1,15 @@
 
 #include <OneWire.h>
 #include <DallasTemperature.h>
-// Data wire is plugged into pin 2 on the Arduino
-#define ONE_WIRE_BUS A2
+
+/***************************************************************************************************
+****************   VARIABLES **********************************************************************/
 #define EXCHANGER 1 //1/2/3/4
 const String POSITION = "start"; //start || end
+/*************************************************************************************************/
+
+// Data wire is plugged into pin A2 on the Arduino
+#define ONE_WIRE_BUS A2
 String filename = EXCHANGER+"_"+POSITION+".csv";
 
 // Setup a oneWire instance to communicate with any OneWire devices
@@ -16,8 +21,8 @@ DallasTemperature sensors(&oneWire);
  * http://henrysch.capnfatz.com/henrys-bench/arduino-tempera#define FRIDGE_RELAY 10
 ture-measurements/ds18b20-arduino-user-manual-introduction-and-contents/ds18b20-user-manual-part-2-getting-the-device-address/
  */
-DeviceAddress BOTTOM_TEMP_SENSOR =     {0x28, 0xFF, 0x16, 0x8D, 0x87, 0x16, 0x03, 0x50}; //checked - sensor with breadboard wires on it
-DeviceAddress TOP_TEMP_SENSOR =  {0x28, 0xFF, 0xE8, 0x8F, 0x70, 0x16, 0x05, 0x79}; //checked
+DeviceAddress BOTTOM_TEMP_SENSOR =     {0x28, 0xFF, 0x16, 0x8D, 0x87, 0x16, 0x03, 0x50}; //checked - long wire sensor
+DeviceAddress TOP_TEMP_SENSOR =  {0x28, 0xFF, 0xE8, 0x8F, 0x70, 0x16, 0x05, 0x79}; //checked - short wire sensor
 
 
 void setup() {
@@ -37,9 +42,6 @@ void setup() {
 }
 
 void loop() {
-  // call sensors.requestTemperatures() to issue a global temperature
-  // request to all devices on the bus
-//  Serial.print(" Requesting temperatures...");
   // Tell the Sensor to Measure and Remember the Temperature it Measured
   // http://henrysbench.capnfatz.com/henrys-bench/arduino-temperature-measurements/ds18b20-arduino-user-manual-introduction-and-contents/ds18b20-arduino-users-manual-part-3-reading-a-single-temperature/
   sensors.requestTemperaturesByAddress(TOP_TEMP_SENSOR);// Send the command to get temperatures
@@ -47,8 +49,6 @@ void loop() {
   delay(500);
   sensors.requestTemperaturesByAddress(BOTTOM_TEMP_SENSOR);
   float bottom = sensors.getTempC(BOTTOM_TEMP_SENSOR);
-//  Serial.println("DONE");
-  /********************************************************************/
 //  Serial.print("Top temperature is: ");
 //  Serial.print(top, 4); // The four just increases the resolution that is printed
 //  Serial.print("; Bottom temperature is: ");
@@ -62,5 +62,5 @@ void loop() {
   Serial.print(top, 4); // The four just increases the resolution that is printed
   Serial.print("/");
   Serial.println(bottom, 4);
-  delay(5000);
+  delay(20000);
 }
