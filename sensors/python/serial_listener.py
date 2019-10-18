@@ -32,7 +32,7 @@ def readlineCR(port):
                 # current date and time
                 now = datetime.now()
                 # timestamp = datetime.timestamp(now)
-                strtime = now.strftime("%d/%m/%Y, %H:%M:%S")
+                strtime = now.strftime("%d/%m/%Y: %H:%M:%S")
                 # print ('exhanger = '+exchanger+'; temps are: '+str(top)+' '+str(bottom)+'; timestamp = '+timestamp)
                 # https://docs.python.org/3/library/csv.html
                 file_exists = os.path.isfile(f_name)
