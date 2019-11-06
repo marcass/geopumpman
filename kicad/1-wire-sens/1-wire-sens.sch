@@ -15,28 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:Conn_01x03_Female J3
-U 1 1 5D9E5538
-P 4000 4450
-F 0 "J3" H 4027 4476 50  0000 L CNN
-F 1 "Conn_01x03_Female" H 4027 4385 50  0000 L CNN
-F 2 "" H 4000 4450 50  0001 C CNN
-F 3 "~" H 4000 4450 50  0001 C CNN
-	1    4000 4450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x03_Female J4
-U 1 1 5D9E5598
-P 4000 5200
-F 0 "J4" H 4027 5226 50  0000 L CNN
-F 1 "Conn_01x03_Female" H 4027 5135 50  0000 L CNN
-F 2 "" H 4000 5200 50  0001 C CNN
-F 3 "~" H 4000 5200 50  0001 C CNN
-	1    4000 5200
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 5D9E5672
 P 3550 5450
@@ -81,45 +59,12 @@ F 3 "" H 3550 5050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Jumper:Jumper_2_Open JP1
-U 1 1 5D9E57D4
-P 3600 1700
-F 0 "JP1" H 3600 1935 50  0000 C CNN
-F 1 "Jumper_2_Open" H 3600 1844 50  0000 C CNN
-F 2 "" H 3600 1700 50  0001 C CNN
-F 3 "~" H 3600 1700 50  0001 C CNN
-	1    3600 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Jumper:Jumper_2_Open JP2
-U 1 1 5D9E5838
-P 3600 2200
-F 0 "JP2" H 3600 2435 50  0000 C CNN
-F 1 "Jumper_2_Open" H 3600 2344 50  0000 C CNN
-F 2 "" H 3600 2200 50  0001 C CNN
-F 3 "~" H 3600 2200 50  0001 C CNN
-	1    3600 2200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Jumper:Jumper_2_Open JP3
-U 1 1 5D9E5866
-P 3600 2700
-F 0 "JP3" H 3600 2935 50  0000 C CNN
-F 1 "Jumper_2_Open" H 3600 2844 50  0000 C CNN
-F 2 "" H 3600 2700 50  0001 C CNN
-F 3 "~" H 3600 2700 50  0001 C CNN
-	1    3600 2700
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R1
 U 1 1 5D9E59CF
 P 2900 4450
 F 0 "R1" V 2693 4450 50  0000 C CNN
 F 1 "4k7" V 2784 4450 50  0000 C CNN
-F 2 "" V 2830 4450 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2830 4450 50  0001 C CNN
 F 3 "~" H 2900 4450 50  0001 C CNN
 	1    2900 4450
 	0    1    1    0   
@@ -130,7 +75,7 @@ U 1 1 5D9E5A3C
 P 2900 5200
 F 0 "R2" V 2693 5200 50  0000 C CNN
 F 1 "4k7" V 2784 5200 50  0000 C CNN
-F 2 "" V 2830 5200 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2830 5200 50  0001 C CNN
 F 3 "~" H 2900 5200 50  0001 C CNN
 	1    2900 5200
 	0    1    1    0   
@@ -163,11 +108,11 @@ Text GLabel 5650 3800 0    50   Input ~ 0
 Data2
 Text GLabel 5650 3900 0    50   Input ~ 0
 Data3
-Text GLabel 3100 1700 0    50   Input ~ 0
+Text GLabel 3100 2100 0    50   Input ~ 0
 Data1
 Text GLabel 3100 2200 0    50   Input ~ 0
 Data2
-Text GLabel 3150 2700 0    50   Input ~ 0
+Text GLabel 3100 2300 0    50   Input ~ 0
 Data3
 Text GLabel 4250 2200 2    50   Input ~ 0
 sens
@@ -175,25 +120,6 @@ Text GLabel 3250 4600 3    50   Input ~ 0
 sens
 Text GLabel 3200 5350 3    50   Input ~ 0
 sens
-Wire Wire Line
-	3800 1700 4000 1700
-Wire Wire Line
-	4000 1700 4000 2200
-Wire Wire Line
-	4000 2700 3800 2700
-Wire Wire Line
-	3800 2200 4000 2200
-Connection ~ 4000 2200
-Wire Wire Line
-	4000 2200 4000 2700
-Wire Wire Line
-	4000 2200 4250 2200
-Wire Wire Line
-	3100 1700 3400 1700
-Wire Wire Line
-	3100 2200 3400 2200
-Wire Wire Line
-	3150 2700 3400 2700
 Wire Wire Line
 	3050 4450 3250 4450
 Wire Wire Line
@@ -234,30 +160,18 @@ Text GLabel 8400 3800 2    50   Input ~ 0
 Data2a
 Text GLabel 8400 3900 2    50   Input ~ 0
 Data3a
-Text GLabel 6650 1450 0    50   Input ~ 0
+Text GLabel 6400 1450 0    50   Input ~ 0
 Data1
-Text GLabel 6650 1550 0    50   Input ~ 0
+Text GLabel 6400 1550 0    50   Input ~ 0
 Data2
-Text GLabel 6650 1650 0    50   Input ~ 0
+Text GLabel 6400 1650 0    50   Input ~ 0
 Data3
-Text GLabel 7550 1450 2    50   Input ~ 0
+Text GLabel 7950 1450 2    50   Input ~ 0
 Data1a
-Text GLabel 7550 1550 2    50   Input ~ 0
+Text GLabel 7950 1550 2    50   Input ~ 0
 Data2a
-Text GLabel 7550 1650 2    50   Input ~ 0
+Text GLabel 7950 1650 2    50   Input ~ 0
 Data3a
-Wire Wire Line
-	6900 1450 6650 1450
-Wire Wire Line
-	6900 1550 6650 1550
-Wire Wire Line
-	6900 1650 6650 1650
-Wire Wire Line
-	7550 1450 7400 1450
-Wire Wire Line
-	7550 1550 7400 1550
-Wire Wire Line
-	7550 1650 7400 1650
 $Comp
 L DUALRJ45:DUALRJ45 U1
 U 1 1 5DC21074
@@ -375,21 +289,21 @@ Wire Wire Line
 Wire Wire Line
 	7950 3900 8400 3900
 $Comp
-L Connector:Screw_Terminal_01x03 J?
+L Connector:Screw_Terminal_01x03 J2
 U 1 1 5DC33416
-P 4200 5800
-F 0 "J?" H 4280 5842 50  0000 L CNN
-F 1 "Screw_Terminal_01x03" H 4280 5751 50  0000 L CNN
-F 2 "" H 4200 5800 50  0001 C CNN
-F 3 "~" H 4200 5800 50  0001 C CNN
-	1    4200 5800
+P 4000 4450
+F 0 "J2" H 4080 4492 50  0000 L CNN
+F 1 "Screw_Terminal_01x03" H 4080 4401 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-3_P5.08mm" H 4000 4450 50  0001 C CNN
+F 3 "~" H 4000 4450 50  0001 C CNN
+	1    4000 4450
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x03_Odd_Even J5
+L Connector_Generic:Conn_02x03_Odd_Even J4
 U 1 1 5DC334A3
 P 7100 1550
-F 0 "J5" H 7150 1867 50  0000 C CNN
+F 0 "J4" H 7150 1867 50  0000 C CNN
 F 1 "Conn_02x03_Odd_Even" H 7150 1776 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 7100 1550 50  0001 C CNN
 F 3 "~" H 7100 1550 50  0001 C CNN
@@ -397,10 +311,10 @@ F 3 "~" H 7100 1550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 J?
+L Connector_Generic:Conn_01x03 J6
 U 1 1 5DC33789
 P 7650 2050
-F 0 "J?" V 7523 2230 50  0000 L CNN
+F 0 "J6" V 7523 2230 50  0000 L CNN
 F 1 "Conn_01x03" V 7614 2230 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 7650 2050 50  0001 C CNN
 F 3 "~" H 7650 2050 50  0001 C CNN
@@ -408,14 +322,97 @@ F 3 "~" H 7650 2050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 J?
+L Connector_Generic:Conn_01x03 J5
 U 1 1 5DC3384A
-P 6650 2050
-F 0 "J?" V 6523 2230 50  0000 L CNN
-F 1 "Conn_01x03" V 6614 2230 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6650 2050 50  0001 C CNN
-F 3 "~" H 6650 2050 50  0001 C CNN
-	1    6650 2050
+P 6750 2250
+F 0 "J5" V 6623 2430 50  0000 L CNN
+F 1 "Conn_01x03" V 6714 2430 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6750 2250 50  0001 C CNN
+F 3 "~" H 6750 2250 50  0001 C CNN
+	1    6750 2250
 	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7400 1450 7750 1450
+Wire Wire Line
+	7400 1550 7650 1550
+Wire Wire Line
+	7400 1650 7550 1650
+Wire Wire Line
+	7750 1850 7750 1450
+Connection ~ 7750 1450
+Wire Wire Line
+	7750 1450 7950 1450
+Connection ~ 7650 1550
+Wire Wire Line
+	7650 1550 7950 1550
+Wire Wire Line
+	7550 1850 7550 1650
+Connection ~ 7550 1650
+Wire Wire Line
+	7550 1650 7950 1650
+Wire Wire Line
+	6900 1450 6850 1450
+Wire Wire Line
+	6400 1550 6750 1550
+Wire Wire Line
+	6900 1650 6650 1650
+Connection ~ 6850 1450
+Wire Wire Line
+	6850 1450 6400 1450
+Wire Wire Line
+	6750 2050 6750 1550
+Connection ~ 6750 1550
+Wire Wire Line
+	6750 1550 6900 1550
+Connection ~ 6650 1650
+Wire Wire Line
+	6650 1650 6400 1650
+Wire Wire Line
+	6850 1450 6850 2050
+Wire Wire Line
+	6650 1650 6650 2050
+Wire Wire Line
+	7650 1550 7650 1850
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J1
+U 1 1 5DC468F3
+P 3500 2200
+F 0 "J1" H 3550 2517 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 3550 2426 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 3500 2200 50  0001 C CNN
+F 3 "~" H 3500 2200 50  0001 C CNN
+	1    3500 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2100 3950 2100
+Wire Wire Line
+	3950 2100 3950 2200
+Wire Wire Line
+	3950 2300 3800 2300
+Wire Wire Line
+	3800 2200 3950 2200
+Connection ~ 3950 2200
+Wire Wire Line
+	3950 2200 3950 2300
+Wire Wire Line
+	3950 2200 4250 2200
+Wire Wire Line
+	3100 2100 3300 2100
+Wire Wire Line
+	3100 2200 3300 2200
+Wire Wire Line
+	3100 2300 3300 2300
+$Comp
+L Connector:Screw_Terminal_01x03 J3
+U 1 1 5DC4B9A2
+P 4000 5200
+F 0 "J3" H 4080 5242 50  0000 L CNN
+F 1 "Screw_Terminal_01x03" H 4080 5151 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-3_P5.08mm" H 4000 5200 50  0001 C CNN
+F 3 "~" H 4000 5200 50  0001 C CNN
+	1    4000 5200
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
