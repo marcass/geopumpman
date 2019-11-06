@@ -15,28 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:8P8C J1
-U 1 1 5D9E5479
-P 3750 1950
-F 0 "J1" H 3805 2617 50  0000 C CNN
-F 1 "8P8C" H 3805 2526 50  0000 C CNN
-F 2 "" V 3750 1975 50  0001 C CNN
-F 3 "~" V 3750 1975 50  0001 C CNN
-	1    3750 1950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:8P8C J2
-U 1 1 5D9E54ED
-P 3750 3300
-F 0 "J2" H 3805 3967 50  0000 C CNN
-F 1 "8P8C" H 3805 3876 50  0000 C CNN
-F 2 "" V 3750 3325 50  0001 C CNN
-F 3 "~" V 3750 3325 50  0001 C CNN
-	1    3750 3300
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:Conn_01x03_Female J3
 U 1 1 5D9E5538
 P 4000 4450
@@ -56,17 +34,6 @@ F 1 "Conn_01x03_Female" H 4027 5135 50  0000 L CNN
 F 2 "" H 4000 5200 50  0001 C CNN
 F 3 "~" H 4000 5200 50  0001 C CNN
 	1    4000 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5D9E563D
-P 4300 1500
-F 0 "#PWR?" H 4300 1350 50  0001 C CNN
-F 1 "+5V" H 4315 1673 50  0000 C CNN
-F 2 "" H 4300 1500 50  0001 C CNN
-F 3 "" H 4300 1500 50  0001 C CNN
-	1    4300 1500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -114,58 +81,36 @@ F 3 "" H 3550 5050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
-U 1 1 5D9E56C5
-P 4400 3650
-F 0 "#PWR?" H 4400 3400 50  0001 C CNN
-F 1 "GND" H 4405 3477 50  0000 C CNN
-F 2 "" H 4400 3650 50  0001 C CNN
-F 3 "" H 4400 3650 50  0001 C CNN
-	1    4400 3650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5D9E56EE
-P 4400 2850
-F 0 "#PWR?" H 4400 2700 50  0001 C CNN
-F 1 "+5V" H 4415 3023 50  0000 C CNN
-F 2 "" H 4400 2850 50  0001 C CNN
-F 3 "" H 4400 2850 50  0001 C CNN
-	1    4400 2850
-	1    0    0    -1  
-$EndComp
-$Comp
 L Jumper:Jumper_2_Open JP1
 U 1 1 5D9E57D4
-P 5800 2050
-F 0 "JP1" H 5800 2285 50  0000 C CNN
-F 1 "Jumper_2_Open" H 5800 2194 50  0000 C CNN
-F 2 "" H 5800 2050 50  0001 C CNN
-F 3 "~" H 5800 2050 50  0001 C CNN
-	1    5800 2050
+P 3600 1700
+F 0 "JP1" H 3600 1935 50  0000 C CNN
+F 1 "Jumper_2_Open" H 3600 1844 50  0000 C CNN
+F 2 "" H 3600 1700 50  0001 C CNN
+F 3 "~" H 3600 1700 50  0001 C CNN
+	1    3600 1700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Jumper:Jumper_2_Open JP2
 U 1 1 5D9E5838
-P 5800 2550
-F 0 "JP2" H 5800 2785 50  0000 C CNN
-F 1 "Jumper_2_Open" H 5800 2694 50  0000 C CNN
-F 2 "" H 5800 2550 50  0001 C CNN
-F 3 "~" H 5800 2550 50  0001 C CNN
-	1    5800 2550
+P 3600 2200
+F 0 "JP2" H 3600 2435 50  0000 C CNN
+F 1 "Jumper_2_Open" H 3600 2344 50  0000 C CNN
+F 2 "" H 3600 2200 50  0001 C CNN
+F 3 "~" H 3600 2200 50  0001 C CNN
+	1    3600 2200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Jumper:Jumper_2_Open JP3
 U 1 1 5D9E5866
-P 5800 3050
-F 0 "JP3" H 5800 3285 50  0000 C CNN
-F 1 "Jumper_2_Open" H 5800 3194 50  0000 C CNN
-F 2 "" H 5800 3050 50  0001 C CNN
-F 3 "~" H 5800 3050 50  0001 C CNN
-	1    5800 3050
+P 3600 2700
+F 0 "JP3" H 3600 2935 50  0000 C CNN
+F 1 "Jumper_2_Open" H 3600 2844 50  0000 C CNN
+F 2 "" H 3600 2700 50  0001 C CNN
+F 3 "~" H 3600 2700 50  0001 C CNN
+	1    3600 2700
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -212,43 +157,43 @@ F 3 "" H 2400 5200 50  0001 C CNN
 	1    2400 5200
 	1    0    0    -1  
 $EndComp
-Text GLabel 4550 1750 2    50   Input ~ 0
+Text GLabel 5650 3700 0    50   Input ~ 0
 Data1
-Text GLabel 4550 1950 2    50   Input ~ 0
+Text GLabel 5650 3800 0    50   Input ~ 0
 Data2
-Text GLabel 4550 2150 2    50   Input ~ 0
+Text GLabel 5650 3900 0    50   Input ~ 0
 Data3
-Text GLabel 5300 2050 0    50   Input ~ 0
+Text GLabel 3100 1700 0    50   Input ~ 0
 Data1
-Text GLabel 5300 2550 0    50   Input ~ 0
+Text GLabel 3100 2200 0    50   Input ~ 0
 Data2
-Text GLabel 5350 3050 0    50   Input ~ 0
+Text GLabel 3150 2700 0    50   Input ~ 0
 Data3
-Text GLabel 6450 2550 2    50   Input ~ 0
+Text GLabel 4250 2200 2    50   Input ~ 0
 sens
 Text GLabel 3250 4600 3    50   Input ~ 0
 sens
 Text GLabel 3200 5350 3    50   Input ~ 0
 sens
 Wire Wire Line
-	6000 2050 6200 2050
+	3800 1700 4000 1700
 Wire Wire Line
-	6200 2050 6200 2550
+	4000 1700 4000 2200
 Wire Wire Line
-	6200 3050 6000 3050
+	4000 2700 3800 2700
 Wire Wire Line
-	6000 2550 6200 2550
-Connection ~ 6200 2550
+	3800 2200 4000 2200
+Connection ~ 4000 2200
 Wire Wire Line
-	6200 2550 6200 3050
+	4000 2200 4000 2700
 Wire Wire Line
-	6200 2550 6450 2550
+	4000 2200 4250 2200
 Wire Wire Line
-	5300 2050 5600 2050
+	3100 1700 3400 1700
 Wire Wire Line
-	5300 2550 5600 2550
+	3100 2200 3400 2200
 Wire Wire Line
-	5350 3050 5600 3050
+	3150 2700 3400 2700
 Wire Wire Line
 	3050 4450 3250 4450
 Wire Wire Line
@@ -283,84 +228,194 @@ Wire Wire Line
 	3550 5450 3550 5300
 Wire Wire Line
 	3550 5300 3800 5300
+Text GLabel 8400 3700 2    50   Input ~ 0
+Data1a
+Text GLabel 8400 3800 2    50   Input ~ 0
+Data2a
+Text GLabel 8400 3900 2    50   Input ~ 0
+Data3a
+Text GLabel 6650 1450 0    50   Input ~ 0
+Data1
+Text GLabel 6650 1550 0    50   Input ~ 0
+Data2
+Text GLabel 6650 1650 0    50   Input ~ 0
+Data3
+Text GLabel 7550 1450 2    50   Input ~ 0
+Data1a
+Text GLabel 7550 1550 2    50   Input ~ 0
+Data2a
+Text GLabel 7550 1650 2    50   Input ~ 0
+Data3a
 Wire Wire Line
-	4400 3650 4400 3600
+	6900 1450 6650 1450
 Wire Wire Line
-	4400 3600 4150 3600
+	6900 1550 6650 1550
 Wire Wire Line
-	4150 2900 4400 2900
+	6900 1650 6650 1650
 Wire Wire Line
-	4400 2900 4400 2850
+	7550 1450 7400 1450
+Wire Wire Line
+	7550 1550 7400 1550
+Wire Wire Line
+	7550 1650 7400 1650
+$Comp
+L DUALRJ45:DUALRJ45 U1
+U 1 1 5DC21074
+P 7050 3950
+F 0 "U1" H 7050 4978 50  0000 C CNN
+F 1 "DUALRJ45" H 7050 4887 50  0000 C CNN
+F 2 "RJ45_dual:RJ45_dual" H 7050 3950 50  0001 C CNN
+F 3 "DOCUMENTATION" H 7050 3950 50  0001 C CNN
+	1    7050 3950
+	1    0    0    -1  
+$EndComp
 $Comp
 L power:GND #PWR?
-U 1 1 5D9E7495
-P 4350 2300
-F 0 "#PWR?" H 4350 2050 50  0001 C CNN
-F 1 "GND" H 4355 2127 50  0000 C CNN
-F 2 "" H 4350 2300 50  0001 C CNN
-F 3 "" H 4350 2300 50  0001 C CNN
-	1    4350 2300
+U 1 1 5DC22CF8
+P 7150 4800
+F 0 "#PWR?" H 7150 4550 50  0001 C CNN
+F 1 "GND" H 7155 4627 50  0000 C CNN
+F 2 "" H 7150 4800 50  0001 C CNN
+F 3 "" H 7150 4800 50  0001 C CNN
+	1    7150 4800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4150 2250 4350 2250
-Wire Wire Line
-	4350 2250 4350 2300
-Wire Wire Line
-	4300 1500 4300 1550
-Wire Wire Line
-	4300 1550 4150 1550
-Wire Wire Line
-	4550 1750 4150 1750
-Wire Wire Line
-	4550 1950 4150 1950
-Wire Wire Line
-	4550 2150 4150 2150
-Text GLabel 4550 3100 2    50   Input ~ 0
-Data1a
-Text GLabel 4550 3300 2    50   Input ~ 0
-Data2a
-Text GLabel 4550 3500 2    50   Input ~ 0
-Data3a
-Wire Wire Line
-	4550 3100 4150 3100
-Wire Wire Line
-	4550 3300 4150 3300
-Wire Wire Line
-	4550 3500 4150 3500
 $Comp
-L Connector_Generic:Conn_02x03_Counter_Clockwise J5
-U 1 1 5D9EABFF
-P 8250 3250
-F 0 "J5" H 8300 3567 50  0000 C CNN
-F 1 "Conn_02x03_Counter_Clockwise" H 8300 3476 50  0000 C CNN
-F 2 "" H 8250 3250 50  0001 C CNN
-F 3 "~" H 8250 3250 50  0001 C CNN
-	1    8250 3250
+L power:GND #PWR?
+U 1 1 5DC22D45
+P 7050 4800
+F 0 "#PWR?" H 7050 4550 50  0001 C CNN
+F 1 "GND" H 7055 4627 50  0000 C CNN
+F 2 "" H 7050 4800 50  0001 C CNN
+F 3 "" H 7050 4800 50  0001 C CNN
+	1    7050 4800
 	1    0    0    -1  
 $EndComp
-Text GLabel 7800 3150 0    50   Input ~ 0
-Data1
-Text GLabel 7800 3250 0    50   Input ~ 0
-Data2
-Text GLabel 7800 3350 0    50   Input ~ 0
-Data3
-Text GLabel 8700 3150 2    50   Input ~ 0
-Data1a
-Text GLabel 8700 3250 2    50   Input ~ 0
-Data2a
-Text GLabel 8700 3350 2    50   Input ~ 0
-Data3a
+$Comp
+L power:GND #PWR?
+U 1 1 5DC22D66
+P 6950 4800
+F 0 "#PWR?" H 6950 4550 50  0001 C CNN
+F 1 "GND" H 6955 4627 50  0000 C CNN
+F 2 "" H 6950 4800 50  0001 C CNN
+F 3 "" H 6950 4800 50  0001 C CNN
+	1    6950 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DC22DB3
+P 5700 3300
+F 0 "#PWR?" H 5700 3050 50  0001 C CNN
+F 1 "GND" H 5705 3127 50  0000 C CNN
+F 2 "" H 5700 3300 50  0001 C CNN
+F 3 "" H 5700 3300 50  0001 C CNN
+	1    5700 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DC22DD4
+P 8400 3150
+F 0 "#PWR?" H 8400 2900 50  0001 C CNN
+F 1 "GND" H 8405 2977 50  0000 C CNN
+F 2 "" H 8400 3150 50  0001 C CNN
+F 3 "" H 8400 3150 50  0001 C CNN
+	1    8400 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5DC22DF5
+P 5950 4700
+F 0 "#PWR?" H 5950 4550 50  0001 C CNN
+F 1 "+5V" H 5965 4873 50  0000 C CNN
+F 2 "" H 5950 4700 50  0001 C CNN
+F 3 "" H 5950 4700 50  0001 C CNN
+	1    5950 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5DC22E16
+P 8250 4700
+F 0 "#PWR?" H 8250 4550 50  0001 C CNN
+F 1 "+5V" H 8265 4873 50  0000 C CNN
+F 2 "" H 8250 4700 50  0001 C CNN
+F 3 "" H 8250 4700 50  0001 C CNN
+	1    8250 4700
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	8050 3150 7800 3150
+	6150 3600 6150 3300
 Wire Wire Line
-	8050 3250 7800 3250
+	6150 3300 5700 3300
 Wire Wire Line
-	8050 3350 7800 3350
+	7950 3150 8400 3150
 Wire Wire Line
-	8700 3150 8550 3150
+	7950 4300 7950 4700
 Wire Wire Line
-	8700 3250 8550 3250
+	7950 4700 8250 4700
 Wire Wire Line
-	8700 3350 8550 3350
+	6150 4300 6150 4700
+Wire Wire Line
+	6150 4700 5950 4700
+Wire Wire Line
+	7950 3150 7950 3600
+Wire Wire Line
+	6150 3700 5650 3700
+Wire Wire Line
+	6150 3800 5650 3800
+Wire Wire Line
+	6150 3900 5650 3900
+Wire Wire Line
+	7950 3800 8400 3800
+Wire Wire Line
+	7950 3700 8400 3700
+Wire Wire Line
+	7950 3900 8400 3900
+$Comp
+L Connector:Screw_Terminal_01x03 J?
+U 1 1 5DC33416
+P 4200 5800
+F 0 "J?" H 4280 5842 50  0000 L CNN
+F 1 "Screw_Terminal_01x03" H 4280 5751 50  0000 L CNN
+F 2 "" H 4200 5800 50  0001 C CNN
+F 3 "~" H 4200 5800 50  0001 C CNN
+	1    4200 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J5
+U 1 1 5DC334A3
+P 7100 1550
+F 0 "J5" H 7150 1867 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 7150 1776 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 7100 1550 50  0001 C CNN
+F 3 "~" H 7100 1550 50  0001 C CNN
+	1    7100 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5DC33789
+P 7650 2050
+F 0 "J?" V 7523 2230 50  0000 L CNN
+F 1 "Conn_01x03" V 7614 2230 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 7650 2050 50  0001 C CNN
+F 3 "~" H 7650 2050 50  0001 C CNN
+	1    7650 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5DC3384A
+P 6650 2050
+F 0 "J?" V 6523 2230 50  0000 L CNN
+F 1 "Conn_01x03" V 6614 2230 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6650 2050 50  0001 C CNN
+F 3 "~" H 6650 2050 50  0001 C CNN
+	1    6650 2050
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
