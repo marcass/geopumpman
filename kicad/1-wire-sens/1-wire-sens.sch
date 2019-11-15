@@ -267,7 +267,7 @@ U 1 1 5DC33416
 P 4000 4450
 F 0 "J2" H 4080 4492 50  0000 L CNN
 F 1 "Screw_Terminal_01x03" H 4080 4401 50  0000 L CNN
-F 2 "fConnector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.81_1x03_P3.81mm_Vertical" H 4000 4450 50  0001 C CNN
+F 2 "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.81_1x03_P3.81mm_Vertical" H 4000 4450 50  0001 C CNN
 F 3 "~" H 4000 4450 50  0001 C CNN
 	1    4000 4450
 	1    0    0    -1  
