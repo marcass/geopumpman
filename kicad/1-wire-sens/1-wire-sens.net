@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/mw/git/geopumpman/kicad/1-wire-sens/1-wire-sens.sch)
-    (date "Fri 08 Nov 2019 12:44:43 NZDT")
+    (date "Fri 15 Nov 2019 11:28:26 NZDT")
     (tool "Eeschema 5.0.2+dfsg1-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -31,7 +31,7 @@
       (tstamp 5DC21074))
     (comp (ref J2)
       (value Screw_Terminal_01x03)
-      (footprint fConnector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.81_1x03_P3.81mm_Vertical)
+      (footprint Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.81_1x03_P3.81mm_Vertical)
       (datasheet ~)
       (libsource (lib Connector) (part Screw_Terminal_01x03) (description "Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"))
       (sheetpath (names /) (tstamps /))
