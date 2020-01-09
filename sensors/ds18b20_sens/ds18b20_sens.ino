@@ -2,6 +2,8 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
+//#define debug
+
 /***************************************************************************************************
 ****************   VARIABLES **********************************************************************/
 #define EXCHANGER 4 //1/2/3/4
@@ -34,11 +36,13 @@ void setup() {
   sensors.setResolution(TOP_TEMP_SENSOR, 11);
   sensors.setResolution(BOTTOM_TEMP_SENSOR, 11);
   // confirm that we set that resolution by asking the DS18B20 to repeat it back
-  Serial.print("Sensor Resolution: Top - ");
-  Serial.print(sensors.getResolution(TOP_TEMP_SENSOR), DEC);
-  Serial.print(", Bottom - ");
-  Serial.println(sensors.getResolution(BOTTOM_TEMP_SENSOR), DEC);
-  Serial.println();
+  #ifdef debug
+    Serial.print("Sensor Resolution: Top - ");
+    Serial.print(sensors.getResolution(TOP_TEMP_SENSOR), DEC);
+    Serial.print(", Bottom - ");
+    Serial.println(sensors.getResolution(BOTTOM_TEMP_SENSOR), DEC);
+    Serial.println();
+  #endif
 }
 
 void loop() {
@@ -49,10 +53,12 @@ void loop() {
   delay(500);
   sensors.requestTemperaturesByAddress(BOTTOM_TEMP_SENSOR);
   float bottom = sensors.getTempC(BOTTOM_TEMP_SENSOR);
-//  Serial.print("Top temperature is: ");
-//  Serial.print(top, 4); // The four just increases the resolution that is printed
-//  Serial.print("; Bottom temperature is: ");
-//  Serial.println(bottom, 4);
+  #ifdef debug
+    Serial.print("Top temperature is: ");
+    Serial.print(top, 4); // The four just increases the resolution that is printed
+    Serial.print("; Bottom temperature is: ");
+    Serial.println(bottom, 4);
+  #endif
   //Paylod for python3
   Serial.print("DATA/");
   Serial.print(EXCHANGER);
@@ -62,5 +68,6 @@ void loop() {
   Serial.print(top, 4); // The four just increases the resolution that is printed
   Serial.print("/");
   Serial.println(bottom, 4);
+//  delay(1000);
   delay(20000);
 }
