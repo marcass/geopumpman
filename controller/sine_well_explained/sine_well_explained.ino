@@ -1,70 +1,85 @@
-// link for this code: http://www.eprojectszone.com/how-to-generate-a-sine-wave-from-arduino-or-atmega-328/
+//some not working code:  http://www.eprojectszone.com/how-to-generate-a-sine-wave-from-arduino-or-atmega-328/
 //3-phase (requies more timers, so a due or mega): http://www.eprojectszone.com/how-to-generate-three-phase-spwm-signal-with-arduino/
-//usefil explinder on sine wave generatioin: https://github.com/Irev-Dev/Arduino-Atmel-sPWM
+//link for this code: https://github.com/Irev-Dev/Arduino-Atmel-sPWM
 
 //no dead time in this!
 
-int i=0;
-int x=0;
-int OK=0;
-int sinPWM[]={1,2,5,7,10,12,15,17,19,22,24,27,30,32,34,37,39,42,
-44,47,49,52,54,57,59,61,64,66,69,71,73,76,78,80,83,85,88,90,92,94,97,99,
-101,103,106,108,110,113,115,117,119,121,124,126,128,130,132,134,136,138,140,142,144,146,
-148,150,152,154,156,158,160,162,164,166,168,169,171,173,175,177,178,180,182,184,185,187,188,190,192,193,
-195,196,198,199,201,202,204,205,207,208,209,211,212,213,215,216,217,219,220,221,222,223,224,225,226,227,
-228,229,230,231,232,233,234,235,236,237,237,238,239,240,240,241,242,242,243,243,244,244,245,245,246,246,
-247,247,247,248,248,248,248,249,249,249,249,249,255,255,255,255,249,249,249,249,249,248,
-248,248,248,247,247,247,246,246,245,245,244,244,243,243,242,242,241,240,240,239,238,237,237,236,235,234,
-233,232,231,230,229,228,227,226,225,224,223,222,221,220,219,217,216,215,213,212,211,209,208,207,205,204,
-202,201,199,198,196,195,193,192,190,188,187,185,184,182,180,178,177,175,173,171,169,168,166,164,162,160,
-158,156,154,152,150,148,146,144,142,140,138,136,134,132,130,128,126,124,121,119,117,115,113,110,108,106,
-103,101,99,97,94,92,90,88,85,83,80,78,76,73,71,69,66,64,61,59,57,54,52,49,47,44,42,39,37,34,32,30,
-27,24,22,19,17,15,12,10,7,5,2,1};
 
-void setup() {
-  Serial.begin(115200);
+/*
+ * sPWMv2.c
+ *
+ * Created: 31/12/2014
+ * Author: Kurt Hutten
+ 
+ sPWM on the for atmel chips. Confirmed compatable with ATmega328, ATmega2560 and the arduino Uno, mega2560.
+ Likely compatable with other atmel chips / arduino boards.
+ Compare outputs A and B output to PB1 and PB2, which are pins 9  and 10 on the Arduino Uno (and nano), respectively.
+ Compare outputs A and B output to PB5 and PB6, which are pins 11 and 12 on the Arduino mega2560, respectively.
+ Also useful to know the led is:
+   PB5 on the Uno.
+   PB7 on the mega2560.
+ */ 
+
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <math.h>
+
+#define SinDivisions (50)// Sub divisions of sisusoidal wave.
+
+static int microMHz = 16; // Micro clock frequency
+static int freq = 50;     // Sinusoidal frequency
+static long int period;   // Period of PWM in clock cycles.
+static unsigned int lookUp[SinDivisions];
+static char theTCCR1A = 0b10000010; //varible for TCCR1A
+static int DEAD_TIME = 200; //dead time in microseconds
+
+int main(void){
+  double temp; //Double varible for <math.h> functions.
   
-  pinMode(5, OUTPUT);
-  pinMode(6,OUTPUT);
+  period = microMHz*1e6/freq/SinDivisions;// Period of PWM in clock cycles
   
-  cli();// stop interrupts
-  TCCR0A=0;//reset the value
-  TCCR0B=0;//reset the value
-  TCNT0=0;//reset the value
-  //0b allow me to write bits in binary
-  TCCR0A=0b10100001;//phase correct pwm mode
-  TCCR0B=0b00000001; //no prescaler
-  TCCR1A=0;//reset the value
-  TCCR1B=0;//reset the value
-  TCNT1=0;//reset the value
-  OCR1A=509;// compare match value
-  TCCR1B=0b00001001; //WGM12 bit is 1 and no prescaler
+  for(int i = 0; i < SinDivisions/2; i++){ // Generating the look up table.
+    temp = sin((i+0.5)*2*M_PI/SinDivisions)*period;
+    lookUp[i] = (int)(temp+0.5);       // Round to integer.    
+  }
+  // Register initilisation, see datasheet for more detail.
+  TCCR1A = theTCCR1A; // 0b10000010;
+        /*10 clear on match, set at BOTTOM for compA.
+          00 compB disconected initially, toggled later to clear on match, set at BOTTOM.
+          00
+          10 WGM1 1:0 for waveform 15.
+        */
+  TCCR1B = 0b00011001;
+        /*000
+          11 WGM1 3:2 for waveform 15.
+          001 no prescale on the counter.
+        */
+  TIMSK1 = 0b00000001;
+        /*0000000
+          1 TOV1 Flag interrupt enable.
+        */  
+  ICR1   = period;   /* Period for 16MHz crystal, for a switching frequency of 100KHz for 200 subdivisions per 50Hz sin wave cycle. */
+  sei();             // Enable global interrupts.
+  DDRB = 0b00000110; // Set PB1 and PB2 as outputs.
   
-  TIMSK1 |=(1 << OCIE1A);
-  
-  sei();// enable interrupts
+  while(1){; /* Do nothing . . . forever. */}
 }
 
-ISR(TIMER1_COMPA_vect){// interrupt when timer 1 match with OCR1A value
-  if(i>313 && OK==0){// final value from vector for pin 6
-    i=0;// go to first value of vector
-    OK=1;//enable pin 5
-  }
-  if(i>313 && OK==1){// final value from vector for pin 5
-    i=0;//go to firs value of vector
-    OK=0;//enable pin 6
-  }
-  x=sinPWM[i];// x take the value from vector corresponding to position i(i is zero indexed)
-  i=i+1;// go to the next position
-  if(OK==0){
-    OCR0B=0;//make pin 5 0
-    OCR0A=x;//enable pin 6 to corresponding duty cycle
-  }
-  if(OK==1){
-    OCR0A=0;//make pin 6 0
-    OCR0B=x;//enable pin 5 to corresponding duty cycle
-  }
+ISR(TIMER1_OVF_vect){
+    static int num;
+    static int delay1;
+    
+    if(delay1 == 1){/*delay by one period because the high time loaded into OCR1A:B values are buffered but can be disconnected immediately by TCCR1A. */
+      theTCCR1A ^= 0b10100000;// Toggle connect and disconnect of compare output A and B.
+      TCCR1A = theTCCR1A;
+      delay1 = 0;             // Reset delay1
+    } else if(num >= SinDivisions/2){
+      num = 0;                // Reset num
+      delay1++;
+      delayMicroseconds(DEAD_TIME);
+    }
+    // change )duty-cycle every period.
+    OCR1A = OCR1B = lookUp[num];
+    num++;      
 }
-void loop() {
 
-}
