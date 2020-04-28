@@ -1,3 +1,4 @@
+//To output complementary pulses, e.g. on pin 44 (PWMH5) and pin 8 (PWML5), you have to program directly the PWM controller. Here is an example sketch to program PWMH2/PWML2 :
 
 void setup () {
 
